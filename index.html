@@ -8,6 +8,7 @@
     />
     <title>Plyr Demo</title>
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <p>Audio:</p>
@@ -16,19 +17,21 @@
     </audio>
     <p>Video:</p>
     <p>
-      <video id="player" playsinline controls data-poster="/path/to/poster.jpg">
+      <video
+        id="player2"
+        playsinline
+        controls
+        data-poster="/path/to/poster.jpg"
+      >
         <source src="video.mp4" type="video/mp4" />
       </video>
 
       <script src="https://cdn.plyr.io/3.7.2/plyr.polyfilled.js"></script>
       <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          new GreenAudioPlayer(".ready-player-1", {
-            showTooltips: true,
-            showDownloadButton: false,
-            enableKeystrokes: true
-          });
-        });
+        const player = new Plyr("#player");
+        window.player = player;
+        const player2 = new Plyr("#player2");
+        window.player2 = player2;
       </script>
     </p>
   </body>
