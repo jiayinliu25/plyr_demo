@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,shrink-to-fit=no"
+    />
+    <title>Plyr Demo</title>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
+  </head>
+  <body>
+    <p>Audio:</p>
+    <audio id="player" controls>
+      <source src="rain.wav" type="audio/wav" />
+    </audio>
+    <p>Video:</p>
+    <p>
+      <video id="player" playsinline controls data-poster="/path/to/poster.jpg">
+        <source src="video.mp4" type="video/mp4" />
+      </video>
+
+      <script src="https://cdn.plyr.io/3.7.2/plyr.polyfilled.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          new GreenAudioPlayer(".ready-player-1", {
+            showTooltips: true,
+            showDownloadButton: false,
+            enableKeystrokes: true
+          });
+        });
+      </script>
+    </p>
+  </body>
+</html>
